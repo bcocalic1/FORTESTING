@@ -869,7 +869,9 @@ app.get('/', function (req, res) {
 });
 
 
-var server = app.listen(1000, () => {
+
+const port = process.env.PORT || 1000;
+var server = app.listen(port, () => {
     //synchronization();
     console.log("Baza kreirana i popunjena");
 });
