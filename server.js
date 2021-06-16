@@ -872,7 +872,7 @@ app.get('/', function (req, res) {
 
 const port = process.env.PORT || 1000;
 var server = app.listen(port, () => {
-    synchronization();
+    setup.synchronization();
     console.log("Baza kreirana i popunjena");
 });
 
