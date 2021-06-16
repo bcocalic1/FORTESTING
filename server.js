@@ -3,7 +3,7 @@ const fs = require('fs');
 const url = require('url');
 const express = require('express');
 const app = express();
-//const setup = require('./dbInit.js');
+const setup = require('./dbInit.js');
 const bodyParser = require('body-parser');
 const db = require('./database/db.js');
 const { query } = require('express');
@@ -872,7 +872,7 @@ app.get('/', function (req, res) {
 
 const port = process.env.PORT || 1000;
 var server = app.listen(port, () => {
-    //synchronization();
+    synchronization();
     console.log("Baza kreirana i popunjena");
 });
 
